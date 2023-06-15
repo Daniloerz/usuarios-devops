@@ -22,7 +22,7 @@ jacocoTestReport {
 }
 
 tasks.named('sonar').configure {
-	dependsOn test
+	dependsOn jacocoTestReport
 }
 
 group = 'com.powerup.usuario'
