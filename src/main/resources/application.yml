@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+spring:
+  eureka:
+    instance:
+      instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    client:
+      serviceUrl:
+        defaultZone: http://localhost:8761/eureka
+  application:
+    name: usuario-powerup
+  datasource:
+    url: ${BD_URL}
+    username: ${BD_USERNAME}
+    password: ${BD_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+appDescription: "Pragma Powerup"
+appVersion: "1.0.0"

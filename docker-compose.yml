@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  usuarios:
+    image: 687633921893.dkr.ecr.us-east-1.amazonaws.com/usuarios
+    container_name: usuarios-container
+    expose:
+      - 8081
+    ports:
+      - 8081:8081
+    environment:
+      BD_URL: ${BD_URL_USUARIOS}
+      BD_USERNAME: ${BD_USER_USUARIOS}
+      BD_PASSWORD: ${BD_PASS_USUARIOS}
+      eureka.client.serviceUrl.defaultZone: ${EUREKA_DEFAULTZONE_PLAZOLETA}
+      server.port: 8081
