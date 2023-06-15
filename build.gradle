@@ -18,6 +18,11 @@ jacocoTestReport {
 	reports {
 		xml.enabled true
 	}
+	dependsOn test
+}
+
+tasks.named('sonar').configure {
+	dependsOn test
 }
 
 group = 'com.powerup.usuario'
