@@ -20,6 +20,7 @@ jacocoTestReport {
 	}
 	dependsOn test
 }
+test.finalizedBy jacocoTestReport
 
 tasks.named('sonar').configure {
 	dependsOn jacocoTestReport
