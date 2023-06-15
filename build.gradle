@@ -20,10 +20,12 @@ jacocoTestReport {
 	}
 	dependsOn test
 }
+test.finalizedBy jacocoTestReport
 
 tasks.named('sonar').configure {
-	dependsOn test
+	dependsOn jacocoTestReport
 }
+
 
 group = 'com.powerup.usuario'
 version = '0.0.1-SNAPSHOT'
