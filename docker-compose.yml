@@ -2,7 +2,7 @@ version: '3'
 
 services:
   usuarios:
-    image: 687633921893.dkr.ecr.us-east-1.amazonaws.com/usuarios
+    image: 687633921893.dkr.ecr.us-east-1.amazonaws.com/usuarios-devops:latest
     container_name: usuarios-container
     expose:
       - 8081
