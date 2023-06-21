@@ -109,5 +109,6 @@ jobs:
           application_name: api-food
           environment_name: Api-food-env-2
           version_label: v.100
+          use_existing_version_if_available: true
           region: ${{ secrets.AWS_REGION }}
           deployment_package: deploy.zip
