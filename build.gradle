@@ -70,6 +70,13 @@ dependencies {
 
 	implementation "org.springdoc:springdoc-openapi-ui:${openApiVersion}"
 	implementation "org.springdoc:springdoc-openapi-webflux-ui:${openApiVersion}"
+
+	implementation group: 'com.amazonaws', name: 'aws-xray-recorder-sdk-core', version: '2.14.0'
+	implementation group: 'com.amazonaws', name: 'aws-xray-recorder-sdk-aws-sdk', version: '2.14.0'
+	implementation group: 'com.amazonaws', name: 'aws-xray-recorder-sdk-apache-http', version: '2.14.0'
+	implementation group: 'com.amazonaws', name: 'aws-xray-recorder-sdk-sql-mysql', version: '2.14.0'
+	implementation group: 'com.amazonaws', name: 'aws-xray-recorder-sdk-aws-sdk-v2-instrumentor', version: '2.14.0'
+
 }
 
 dependencyManagement {
