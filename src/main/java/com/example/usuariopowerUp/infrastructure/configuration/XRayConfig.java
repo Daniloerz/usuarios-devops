@@ -40,5 +40,9 @@ public class XRayConfig {
         builder.withSamplingStrategy(new LocalizedSamplingStrategy(ruleFile));
 
         AWSXRay.setGlobalRecorder(builder.build());
+
+        AWSXRay.beginSegment("usuarios-devops-init");
+
+        AWSXRay.endSegment();
     }
 }
