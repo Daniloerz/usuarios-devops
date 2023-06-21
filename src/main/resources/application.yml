@@ -21,3 +21,9 @@ spring:
     show-sql: true
 appDescription: "Pragma Powerup"
 appVersion: "1.0.0"
+
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG

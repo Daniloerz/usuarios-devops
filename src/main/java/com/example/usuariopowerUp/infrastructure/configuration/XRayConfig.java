@@ -1,5 +1,6 @@
 package com.example.usuariopowerUp.infrastructure.configuration;
 
+import com.amazonaws.xray.entities.Segment;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration;
@@ -41,8 +42,8 @@ public class XRayConfig {
 
         AWSXRay.setGlobalRecorder(builder.build());
 
-        AWSXRay.beginSegment("usuarios-devops-init");
-
+        Segment segment = AWSXRay.beginSegment("usuarios-devops-init");
+        logger.info("Segment started traceID={}, segment", segment.getTraceId(), segment.prettySerialize());
         AWSXRay.endSegment();
     }
 }

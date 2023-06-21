@@ -22,6 +22,7 @@ import com.amazonaws.xray.AWSXRay;
 @RequiredArgsConstructor
 public class UsuarioRestController {
 
+
     private final IUsuarioHandler usuarioHandler;
 
 
