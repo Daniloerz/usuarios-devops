@@ -15,4 +15,4 @@ services:
       eureka.client.serviceUrl.defaultZone: ${EUREKA_DEFAULTZONE_PLAZOLETA}
       server.port: 8081
     volumes:
-      - /opt/aws/amazon-cloudwatch-agent/etc/:/opt/aws/amazon-cloudwatch-agent/etc/app
+      - /opt/aws/amazon-cloudwatch-agent/etc:/opt/aws/amazon-cloudwatch-agent/etc
