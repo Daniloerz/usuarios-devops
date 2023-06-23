@@ -25,7 +25,6 @@ import com.amazonaws.xray.strategy.sampling.LocalizedSamplingStrategy;
 
 @Configuration
 @EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class, DataSourceTransactionManagerAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
-@Profile("nodb")
 public class XRayConfig {
     private static final Logger logger = LoggerFactory.getLogger(XRayConfig.class);
 
